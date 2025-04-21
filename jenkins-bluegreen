@@ -25,7 +25,7 @@ pipeline {
 
         stage('GCP Login') {
             steps {
-                withCredentials([file(credentialsId: 'gcp-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
+                withCredentials([file(credentialsId: 'gcp-key-manisai', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
                     sh '''
                     # Authenticate with Google Cloud
                     echo "Using credentials from: $GOOGLE_APPLICATION_CREDENTIALS"
