@@ -1,9 +1,9 @@
 pipeline {
     agent any
     environment {
-        ZONE = "us-central1-c"
+        ZONE = "europe-west3-c"
         IMAGE_NAME = "bule-green"
-        CLUSTER_NAME = "cluster-2"
+        CLUSTER_NAME = "cluster-1"
         GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-key')
         GREEN_DEPLOY = "k8s/green.yaml"
         BLUE_DEPLOY = "k8s/blue.yaml"
