@@ -87,7 +87,7 @@ pipeline {
                 retry(3) {
                     sh '''
                     sleep 20
-                   gcloud container clusters get-credentials cluster-1 --zone us-west4-a --project saicharan-452306
+                   gcloud container clusters get-credentials cluster-2 --zone me-west1-b --project saicharan-452306
                     '''
                 }
             }
