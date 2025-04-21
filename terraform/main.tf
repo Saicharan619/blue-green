@@ -1,6 +1,6 @@
 provider "google" {
   zone = var.region
-  project = "saicharan-452306"
+  project = "manisai"
 }
 
 resource "google_container_cluster" "primary" {
