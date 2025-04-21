@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Docker Login') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'docker-hub', 
+                withCredentials([usernamePassword(credentialsId: 'dockerhub', 
                                                   usernameVariable: 'DOCKER_USER', 
                                                   passwordVariable: 'DOCKER_PASS')]) {
                     sh '''
@@ -25,7 +25,7 @@ pipeline {
 
         stage('GCP Login') {
             steps {
-                withCredentials([file(credentialsId: 'gcp-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
+                withCredentials([file(credentialsId: 'GCP-allinone', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
                     sh '''
                     # Authenticate with Google Cloud
                     echo "Using credentials from: $GOOGLE_APPLICATION_CREDENTIALS"
